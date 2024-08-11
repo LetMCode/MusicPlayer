@@ -213,7 +213,6 @@ const app = {
         progress.onmousedown = () => {
             audio.pause();
         };
-
         progress.onmouseup = () => {
             audio.play();
         };
