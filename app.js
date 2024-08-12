@@ -19,12 +19,16 @@ const nextBtn = $(".btn-next");
 const prevBtn = $(".btn-prev");
 const randomBtn = $(".btn-random");
 const repeatBtn = $(".btn-repeat");
+const valueVolume = $(".value-volume");
+const boxVolume = $(".box-volume")
+const volumeBtn = $(".btn-volume");
 
 const app = {
     currentIndex: 0,
     isPlaying: false,
     isRepeat: false,
     isRandom: false,
+    isHidden:true,
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
     songs: [
         {
@@ -177,6 +181,26 @@ const app = {
             _this.setConfig("isRandom", _this.isRandom);
             randomBtn.classList.toggle("active", _this.isRandom);
         };
+
+        // click btn volume
+        volumeBtn.onclick = () =>{
+            if(_this.isHidden){
+                valueVolume.classList.remove('hidden');
+                _this.isHidden = false;
+            }
+            else{
+                valueVolume.classList.add('hidden');
+                _this.isHidden =true;
+            }
+        }
+
+        // change volume
+        // oninput load lien tuc input
+        valueVolume.oninput = (e) => {
+            const newVolume = e.target.value/100;
+            audio.volume = newVolume;
+        }
+        
 
         // khi dc play
         audio.onplay = function () {

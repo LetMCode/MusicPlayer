@@ -44,6 +44,7 @@ html {
     width: 100%;
     max-width: 480px;
     border-bottom: 1px solid #ebebeb;
+    
 }
 
 /* HEADER */
@@ -86,13 +87,36 @@ header h2 {
     padding: 18px 0 8px 0;
 }
 
-.control .btn {
+.box-volume{
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.value-volume{
+    accent-color: #f17e9d;
+    width: 80%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.btn-volume{
+    color: #666;
+    padding: 15px;
+    font-size: 18px;;
+}
+
+.control .btn{
     color: #666;
     padding: 10px 15px;
     font-size: 18px;
 }
 
-.control .btn:hover {
+
+.control .btn:hover, .btn-volume:hover{
     background-color: #d3d3d3f0;
     border-radius: 50%;
     cursor: pointer;
