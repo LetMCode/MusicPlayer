@@ -34,37 +34,37 @@ const app = {
         {
             name: "Lặng",
             singer: "Shiki",
-            path: "https://audio.jukehost.co.uk/IKdQn2wAXUnQLfNb2ijqQRJKvgnpS8Md",
+            path: "./music/Lang.mp3",
             image: "https://lh3.googleusercontent.com/PyKPezh6aXj0VcS6UkKu2YGRdAcI0gfTE1Tm3mZHMClOGnBnOvbXI3iGCSOkqqiXQcrZw2Zduxp0hGZv=w544-h544-l90-rj",
         },
         {
             name: "Ai Mà Biết Được",
             singer: "Soobin Hoàng Sơn x Tlinh",
-            path: "https://audio.jukehost.co.uk/2JcYLg5zcJOJf4V4UZGsWi4qIJsFKSC5",
+            path: "./music/aiMaBietDuocj.mp3",
             image: "https://lh3.googleusercontent.com/ELjikOgs1rAH-kfK9oD5j_arJlPjHTMLlQKHXXs2b4MZEJztZNUlD2U9fXMBi4Ql3iR0_Ehg10wx0G4=w544-h544-l90-rj",
         },
         {
             name: "Dẫu Có Lỗi Lầm",
             singer: "Công Diễn 2: ATVNCG",
-            path: "https://audio.jukehost.co.uk/GQma7dXTCnAnTdJlLQDSxaGyOjtj6R75",
+            path: "./music/dauCoLoiLam.mp3",
             image: "https://lh3.googleusercontent.com/L4JvOKyQuT62i_NOuhY_IRMzQZDz_F8r1OTwQfrsNN9wAkBfs8YK5hNyhFlyx1IYHkJ1Jn91096BXKw=w544-h544-l90-rj",
         },
         {
             name: "Muốn anh đau",
             singer: "Winno x Hustlang Robber",
-            path: "https://audio.jukehost.co.uk/PvdDvzDL0NFt2JXvBvMm4SRnjyFhRYBY",
+            path: "./music/muonAnhDau.mp3",
             image: "https://lh3.googleusercontent.com/UiAgzScpBy12ULz70vRUC38Xq2kSVWs9rLr-ecGDj8Y5iaKVnPAD50vkiK1LcJv3uIIBq41fykTk3REuPg=w544-h544-l90-rj",
         },
         {
             name: "Biết Đâu Mà Lần",
             singer: "Tage",
-            path: "https://audio.jukehost.co.uk/G6rMtLPHGnzdgRkUD4QCIvPq4BHmLf11",
+            path: "./music/BietDauMaLan.mp3",
             image: "https://lh3.googleusercontent.com/duIXUakdG6AYhvmlAI1hsR8xeJCjKeO_Uk3yVfk_em4ntcz0cEUot_dzf1Ji1pErQW1HXU8mHGP5Ug7y=w544-h544-l90-rj",
         },
         {
             name: "THERE'S NO ONE AT ALL",
             singer: "Sơn Tùng M-TP",
-            path: "https://audio.jukehost.co.uk/PykQGyFaYo4Ge8C6ZOZo022cniBAgyPF",
+            path: "./music/ThereAreNo.mp3",
             image: "https://lh3.googleusercontent.com/IYD9x4j8po31e3yRV-hw2Xx1nF6PUrYq2fQN9R9u7FEruR8uP07kbG3uLk61pdkWS1E_QoiORJpaRjE=w544-h544-l90-rj",
         },
         // {
@@ -217,9 +217,9 @@ const app = {
         // update progress
         audio.ontimeupdate = function () {
             if (audio.duration) {
-                const progressPrecent = Math.floor(
+                const progressPrecent = 
                     (audio.currentTime / audio.duration) * 100
-                );
+                ;
                 progress.value = progressPrecent;
             }
         };
